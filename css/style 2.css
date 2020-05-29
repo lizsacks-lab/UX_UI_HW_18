@@ -97,15 +97,19 @@ body {
     display: flex; 
     justify-content: center;
     margin: 20px; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: "user_research visual_design writer"
+    
 }
 .skills_container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 
 }   
 .skills_box_image {
-  
-    padding: 10px; 
+    
+    padding: 20px; 
 }
 .skills_section_headline {
     font-size: 30px;
@@ -165,4 +169,16 @@ body {
 }
 .li {
     padding: 10px;
+}
+@media only screen and (max-width: 600){
+    .skills {
+    display: grid; 
+    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "user_research" 
+    "visual_design"
+    "writer"
+    ;
+}
 }
