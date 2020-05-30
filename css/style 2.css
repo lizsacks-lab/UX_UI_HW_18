@@ -95,6 +95,7 @@ body {
 }
 .skills {
     display: flex; 
+    flex-wrap: wrap; 
     justify-content: center;
     margin: 20px; 
     display: grid; 
@@ -112,6 +113,7 @@ body {
     padding: 20px; 
 }
 .skills_section_headline {
+    width: 100%; 
     font-size: 30px;
     padding-top: 30px; 
     margin-bottom: 25px; 
