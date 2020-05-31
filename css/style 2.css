@@ -1,4 +1,6 @@
 
+  
+
 body {
     font-family: Josefin Sans, sans-serif;
 }
@@ -61,6 +63,7 @@ body {
 .hero_section_headline {
     font-size: 40px;
     padding-top: 30px; 
+    padding-left: 
     margin-bottom: 25px; 
 }
 .hero_section_subline {
@@ -93,29 +96,35 @@ body {
     width: 100%;
     height: 100%; 
 }
+.main_body_2 {
+
+
 .skills {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center;
-    margin: 20px; 
-    display: grid; 
+    margin: 20px; display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-areas: "user_research visual_design writer"
+    grid-template-areas: "user_research visual_design writer";
+    }
+  
     
 }
 .skills_container {
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
+   
 
 }   
 .skills_box_image {
-    
+    justify-content: center; 
     padding: 20px; 
 }
 .skills_section_headline {
     width: 100%; 
     font-size: 30px;
     padding-top: 30px; 
+    padding-left: 50px;
     margin-bottom: 25px; 
 }
 .skills_section_subline {
@@ -175,8 +184,8 @@ body {
 @media only screen and (max-width: 600){
     .skills {
     display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto auto; 
     grid-template-areas: 
     "user_research" 
     "visual_design"
