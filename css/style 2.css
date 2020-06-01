@@ -70,19 +70,26 @@ body {
     font-size: 20px; 
     font-family: open-sans, sans-serif; 
 }
-.main_body {
-    display: flex; 
-    flex-direction: column; 
-    height: 1200px; 
-}
-.projects {
-    display: flex; 
+
+#projects {
+    display: grid; 
     justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "mestow_box" "projectcreate_box" "fernweh_box";
+}
+#mestow_box {
+    grid-area: mestow_box;
+}
+#projectcreate_box {
+    grid-area: projectcreate_box;
+}
+#fernweh_box {
+    grid-area: fereneweh_box;
 }
 .projects_container {
     display: flex;
-    justify-content: space-between;
     width: 1150px;
+    justify-content: space-between;
 }
 .project_box {
     background-color: white;
@@ -90,6 +97,7 @@ body {
     width: 340px; 
     padding: 10px;
     margin-top: -60px; 
+    margin-left: 60px; 
 }
 .project_box_image {
     object-fit: cover;
@@ -99,22 +107,27 @@ body {
 .main_body_2 {
 
 
-.skills {
-    display: flex; 
-    flex-wrap: wrap; 
+#skills {
     justify-content: center;
-    margin: 20px; display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr
     grid-template-areas: "user_research visual_design writer";
-    }
+}
   
-    
+}  
+#user_research {
+    grid-area: user_research;
+}
+#visual_design {
+    grid-area: visual_design;
+}
+#writer {
+    grid-area: writer;
 }
 .skills_container {
     display: flex;
     justify-content: center; 
-   
-
 }   
 .skills_box_image {
     justify-content: center; 
@@ -182,10 +195,21 @@ body {
     padding: 10px;
 }
 @media only screen and (max-width: 600){
-    .skills {
+    #projects {
+        display: grid; 
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas: 
+        "mestow_box" 
+        "projectcreate_box"
+        "fernweh_box"
+        ;
+    }
+    
+    #skills {
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: auto auto auto; 
+    grid-template-rows: 1fr 1fr 1fr; 
     grid-template-areas: 
     "user_research" 
     "visual_design"
