@@ -85,8 +85,7 @@ body {
 }
 .projects_container {
     display: flex;
-    /*width: 1150px;*/
-    justify-content: space-between;
+    justify-items: space-between;
 }
 .project_box {
     background-color: white;
@@ -124,7 +123,7 @@ body {
 }
 .footer_text {
     color: white;
-    font-family: Josefin Sans; sans-serif;
+    font-family: Josefin Sans, sans-serif;
     font-size: 20px; 
     
 }
@@ -143,23 +142,24 @@ body {
 }
 
 
-/* Here is the desktop media query */
 
-@media all and (min-width: 601px){
+
+@media all and (min-width: 801px){
 
 #skills{
   
-    display: grid; 
+    display: flex; 
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    grid-template-columns: auto auto auto;
-    grid-template-areas: "user_research" "visual_design" "writer";
+    
 }
 .skills_container {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "user_research" "visual_design" "writer";
 }   
 
 .skills_box {
@@ -224,7 +224,7 @@ body {
 }
 .projects_container {
     display: flex;
-    /*width: 1150px;*/
+    width: 1150px;
     justify-content: space-between;
 }
 
@@ -261,29 +261,31 @@ body {
    
 }
 
-@media all and (max-width: 600px){
+@media all and (max-width: 800px){
 
     #skills{
    
-        display: grid; 
+        display: flex; 
         width: 80%;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
+       
+    }
+    .skills_container {
+        display: grid;
+        justify-content: center;
         grid-template-columns: auto;
+        grid-template-rows: auto auto auto; 
         grid-template-areas: 
         "user_research" 
         "visual_design" 
         "writer"
         ;
-    }
-    .skills_container {
-        display: flex;
-        justify-content: center;
     }   
     
     .skills_box {
-        display: flex;
+        display: block;
         justify-content: center;
         align-items: center;
         background-color: white;
@@ -327,15 +329,10 @@ body {
     }
     
     #projects {
-        display: grid; 
+        display: flex; 
         justify-content: center;
-        grid-template-columns: auto;
-        grid-template-rows: 33%, 33%, 33%; 
-        grid-template-areas: 
-        "mestow_box" 
-        "projectcreate_box" 
-        "fernweh_box"
-        ;
+        margin-top: 60px;
+        
     }
     #mestow_box {
         grid-area: mestow_box;
@@ -344,12 +341,20 @@ body {
         grid-area: projectcreate_box;
     }
     #fernweh_box {
-        grid-area: fereneweh_box;
+        grid-area: fernweh_box;
     }
     .projects_container {
-        display: flex;
-        /*width: 1150px;*/
+        width: 80%;
+        display: grid;
         justify-content: space-between;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "mestow_box" 
+        "projectcreate_box" 
+        "fernweh_box"
+        ;
+        
     }
     
     .project_box {
@@ -357,6 +362,7 @@ body {
         padding: 10px;
         margin-top: -60px; 
         margin-left: 60px; 
+        display: block;
     }
     .project_box_image {
         object-fit: cover;
@@ -365,19 +371,19 @@ body {
     }
     
     #user_research{
-        
+        grid-area: user_research;
         padding-left: 20px;
         padding-right: 20px;
     }
     
     #visual_design{
-       
+        grid-area: visual_design;
         padding-left: 20px;
         padding-right: 20px;
     }
     
     #writer{
-
+        grid-area: writer; 
         padding-left: 20px;
         padding-right: 20px;
     }
